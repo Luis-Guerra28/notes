@@ -7,8 +7,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ui": "rm -rf dist && cd ../frontend && npm run build && cp -r dist ../backend",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+    "lint": "eslint ."
   },
   "author": "Luis Guerra",
   "license": "MIT",
@@ -19,6 +18,10 @@
     "mongoose": "^8.6.3"
   },
   "devDependencies": {
+    "@eslint/js": "^9.12.0",
+    "@stylistic/eslint-plugin-js": "^2.9.0",
+    "eslint": "^9.12.0",
+    "globals": "^15.10.0",
     "nodemon": "^3.1.0"
   }
 }
